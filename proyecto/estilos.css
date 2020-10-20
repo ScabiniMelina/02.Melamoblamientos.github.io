@@ -1,0 +1,381 @@
+*{font-family: arial;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+  
+    background-color: darkgray;}
+
+
+header{
+    
+display: flex;
+ height: 90px;
+    width: 100%;
+background-color: white;
+flex-direction: row;
+    justify-content: space-between;/*alinear mente horizontalcontenidos dentro de un contenedor  *//*space-between lo que hace es que deja espacio entre los don contenidos dentro de un contenedor */
+    align-items: center;
+    position: fixed;
+}
+
+.logo-titulo img{
+    width: 60px;
+    height: 60px;
+   /* margin: auto; centrar verticalmente*/
+    
+    
+    
+}
+.logo-titulo h1{
+    float :right;/*solo se utiliza correctamente para alinear texto alado de una imagen*/
+    font-size:18px;
+    line-height: 60px;/*la linea ocupa un alto de 60 px (
+    mismo alto de  la imagen del logo ) y si lo convina con un margin auto se alinea verticalmente*/
+    
+    
+    
+}
+
+#check{
+    display:none;
+}
+@media screen and (min-width : 630px){}
+
+.icon-menu{
+    margin-right: 5px; 
+   
+    font-size: 19px;
+    justify-items: end;
+  border-radius: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background: gray;
+}
+
+.menu{
+    display: block;
+    position:absolute;
+    top:90px;
+    background: white;
+    width: 100%;
+     transition-duration: 0.5s ;
+    left: -100%;
+    
+    
+}
+.menu ul  li {
+    font-size: 20px;
+    padding: 10px;
+    list-style: none;
+    
+    
+}
+.menu ul {
+    padding-right: 20px;
+}
+.menu a {
+    color: black;
+     text-decoration: none;/*subrayado*/
+}
+.menu ul li :hover {
+    left: 0px;
+   padding-top: 5px;
+    padding-bottom: 5px;
+    background :rgba(178, 34, 34);
+   border-radius: 4px;
+}
+#check:checked ~.menu {
+    transition-duration: 0.5s ;
+    left:0px;
+}
+@media screen and (min-width : 630px){
+        .icon-menu{display: none;}
+    .menu{position:static;/*al ponerlo en absolute lo sacamos del flujo normal de l apagina ya que tendria que estar  en le header anteds del icono de menu  y con static lo devolvemos al flujo normal de la pagina*/
+        width: auto;  /*le da un ancho que se adapte a la pagina*/
+        height: auto;/* le da un alto automatico*/
+        
+       
+        align-self:center;
+      justify-self:end;
+       
+    }
+    .menu ul li {
+        display :inline;
+     padding: 5px;
+    }
+    h1{
+        font-size: 25px;
+    }
+}
+
+/*CONTENIDO 1*/
+.contenido1{
+    display: flex;
+    top: 90px;
+    background-image: url(imagenes/b.JPG);
+    width: 100%;
+    height: 730PX;
+
+ 
+    margin-bottom: 7%;
+     background-position: center , 0 ;
+    background-size:cover;
+    background-repeat: no-repeat;
+     
+   justify-content: center;
+    align-items: center;
+   
+}
+.item1{
+    background-color: rgba(119,113,120,0.6);
+    width: 100%;
+    color: white;
+}
+
+.item1 h3{
+    text-align: center;
+   font-size:39px;
+}
+.item1 h4{
+    text-align: center;
+    font-size:27px;
+}
+@media screen and (min-width:750px){
+    .contenido1{
+         background-image: url(imagenes/a.JPG);
+         height: 1000PX;
+    }
+    .item1 h3{
+    text-align: center;
+   font-size:55px;
+}
+.item1 h4{
+    text-align: center;
+    font-size:40px;
+}
+}
+/*contenido2*/
+.contenido2{
+    
+   
+    padding: 40px;
+    width: 94%;
+    margin :auto;
+    display: flex;
+    flex-wrap:wrap;
+   justify-content: center;
+    background:white;
+border-radius: 10px;
+    text-align: center;
+box-shadow:0px 0px 40px ; 
+margin-bottom: 7%;}
+.item2
+{
+   width: 350px ;
+    padding: 20px;
+    height: auto;
+  
+    justify-content: center;
+}
+.item2 h5{
+    background-color:darkgray;
+     padding-top:10px;
+    font-size: 20px;
+    text-align: center;
+}
+.item2 p {
+    padding-top:20px;
+     justify-content:justify;
+}
+.icon-desktop,.icon-th-large,.icon-lightbulb{
+    font-size:40px;
+    
+   
+}
+@media screen and ( min-width:730px){
+    .item2 h5{
+    background-color:darkgray;
+     padding-top:10px;
+    font-size: 35px;
+    text-align: center;
+}
+.item2 p {
+     font-size: 30px;
+    padding-top:20px;
+     justify-content:justify;
+}
+    .icon-desktop,.icon-th-large,.icon-lightbulb{
+    font-size:48px;
+    
+   
+}
+
+}
+/*CONTENIDO3*/
+.contenido3{
+    
+    width: 94%;
+    background: white;
+    margin:auto;
+    border-radius: 10px;
+    box-shadow:0px 0px 40px 0px;
+    
+}
+.contenido3 h2{
+    padding-top: 40px;
+    text-align: center;
+}
+.galeria {
+    padding: 20px;
+    list-style: none;
+    
+    display: grid;
+    grid-gap: 5px;
+    
+    
+    grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+    
+ 
+   
+            
+    
+    
+}
+.galeria img {
+   
+    object-fit:cover;/*recorta la imagen para que se adapte*/
+    width: 100%;
+    height: 100%;
+   
+}
+
+/*contacto*/
+.contenido4{
+    background: white;
+   width: 94%;
+margin:auto;
+    padding-top: 20px;
+    margin-top: 7%;
+    border-radius: 10px;
+    box-shadow:0px 0px 40px 0px;
+   
+    
+    
+    
+   }
+.icono-texto{
+    display: flex;
+   justify-content: flex-start;
+    padding: 10px;
+    padding-left: 20px;
+    font-size: 17px;
+   
+ 
+}
+.datos-de-contacto{
+      padding-bottom: 30px;
+}
+.contenido4 h2{
+   
+   text-align: center;
+    padding: 20px;}
+
+@media screen and (min-width:560px){
+  
+    .icono-texto{
+    
+        font-size: 30px;}
+   .contenido4 h2{
+   
+   font-size: 32px;}
+ 
+}
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
