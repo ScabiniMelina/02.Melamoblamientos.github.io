@@ -1,0 +1,435 @@
+/* @font-face{
+    font-family:"OpenSans-Light";
+    src: url(../fonts/Open_Sans/OpenSans-Light.ttf);
+} */
+
+@font-face {
+    font-family:"OpenSans-Regular";
+    src: url(../fonts/Open_Sans/OpenSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: "OpenSansCondensed-Bold";
+    src: url(../fonts/Open_Sans_Condensed/OpenSansCondensed-Bold.ttf);
+}
+/* 
+@font-face {
+    font-family: "OpenSansCondensed-Light";
+    src: url(../fonts/Open_Sans_Condensed/OpenSansCondensed-Light.ttf);
+} */
+
+
+*{
+    margin: 0px;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 16px;  /* por defecto  16 px*/
+    /* font-family: Arial, Helvetica, sans-serif; */
+     font-family: OpenSans-Regular,Arial, Helvetica, sans-serif; 
+}
+/* em tamaño del font size de un contenedor */
+/* rem tamaño  del font size del body */
+
+:root{
+    --color1:#aa4b41; --color2:#2d3033; --color3:#eee3e3;--color4:#7d403b;--color5:#e4f6ff;--color6:#66686a;
+    --row:80px;
+    --border:2px;
+    --gap: 2px;
+   
+}
+
+.textBaner, header, .logo-title{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* fuentes */
+.title, .sentence p, .textBaner h2 , h6{
+    font-size: 2.1rem;
+    align-self:center;
+    justify-self:center;
+    text-align: center;
+    padding: 0.2em;
+    font-family:OpenSansCondensed-Bold ;
+}
+
+.textBaner h2{
+    font-weight: 100;
+}
+
+.textBaner h1{
+    font-size: 3rem;
+    justify-self:center;
+    align-items: center;
+    text-align: center;
+    padding: 0.5em;          
+ }
+   
+.itemNosotros h5 , a p,span{
+    font-size: 1.3rem;
+    justify-self:center;
+    align-items: center;
+    text-align: center;
+    padding: 0.8em;
+}
+
+.itemNosotros h5 {
+    font-stretch: ultra-expanded;
+    font-weight: 100;
+    font-size: 1.5rem;
+}
+
+.itemNosotros p{
+    font-stretch: semi-expanded;
+    padding: 0.3em;
+}
+.itemNosotros p,li{
+    font-size: 1.2em;
+    padding: 0.2em;
+}
+
+li  {
+    list-style: none;
+}
+
+span{
+    color: rgb(51, 51, 51);
+    font-weight: 600;
+    margin-right:4px;
+} 
+ 
+.sentence p{
+    font-weight: 600;
+    font-stretch:expanded;
+}
+ 
+a{
+    text-decoration: none;
+}
+
+.copyr{
+    font-size: 0.8em;
+}
+
+
+
+/*                                                MENU */
+header{
+    width: 100%;
+    display:grid;
+    position: fixed;
+    grid-template-columns:3fr 1fr;
+    grid-template-rows:var(--row );
+    background-color: rgba(37, 34, 34, 0.568);
+    color:var(--color3);
+    border-bottom:  solid var(--border)  var(--color1);
+    z-index: 3;
+}
+
+.logo{
+   width: var(--row);
+   height: var(--row);
+}
+
+.logo-title{
+    justify-self: flex-start;
+}
+
+nav  a:hover{
+   border-left: 2px solid  var(--color1);
+   color: var(--color1);
+}
+
+nav  a{
+    text-decoration: none;
+    color:var(--color3);
+    border-left: 2px solid  var(--color2);
+    padding: 0.8em;
+}
+
+ul{
+    padding-right:0.6em;
+    display:flex;
+    position: relative;
+    justify-content: flex-end;
+}
+
+.check{
+  display: none;
+}
+
+ul li{
+    padding: 0;
+}
+
+@media  screen and (min-width:1080px)  {
+  :root{
+        --columns:5;
+    } 
+}
+
+.imgBaner{
+    background-image: url(../img/a.jpg) ;
+    width: 100%;
+    height: 100vh;
+    background-attachment:  fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.textBaner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(10, 10, 10, 0.582);
+    flex-direction: column;
+    color:var(--color3);
+    
+}
+  
+.containerNosotros{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--color4);
+    justify-content: center;
+}
+/*                                                    GALERIA                  */
+.itemNosotros img{
+    height: 30%;
+}
+.itemNosotros{
+    width: 300px;
+    margin:1em ;
+    text-align: center;
+    background-color: var(--color2);
+    color: var(--color3);
+    padding:  2em 1em;
+    border-radius: 0.2em;
+    box-shadow: 1px 5px  10px #380a05d2;
+}
+
+.containerNosotros, .containerGalery{
+    padding: 2em;
+}
+
+.galery{
+    padding-top: 2em;
+}
+
+.galery img{
+    width: 100%;
+    /* display: block; */
+}
+
+.containerGalery{
+    background: var(--color6);
+}
+
+.galery{
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat( var(--columns),1fr);
+    grid-gap:2px;
+}
+/*                        CONTACTO */
+.sentence {
+    background: var(--color4);
+    display: flex;
+}
+
+.containerContact{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+form , .contact{
+    margin: 1.4em;
+}
+.sentence{
+    padding: 1.5em;
+}
+
+.itemContact{
+    display: grid;
+    grid-template-columns: 1fr ;
+   grid-template-rows: 1fr 1fr 1fr;
+   grid-gap:var(--gap);
+   text-align: center;
+}
+
+.itemContact  a{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    color: var(--color2);
+    padding: 0.1em;
+    margin: 0.2em;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+form input,textarea{
+    padding: 0.3em;
+    margin: 0.4em;
+    border:none;
+    border-bottom: 1px solid var(--color1);
+}
+
+textarea{
+    padding: 0.3em;
+    margin: 0.5em;
+    justify-self: center;
+    border: 1px solid var(--color1);
+    min-height: 40px;
+    max-height: 90px;
+}
+
+.copyr{
+    border-top: 1px solid var(--color6);
+    margin: 2em;
+    text-align:center;
+    padding: 1em;
+}
+
+button{
+    width: 20%;
+    border: 1px solid var(--color1);border: 1px solid var(--color1);border: 1px solid var(--color1);
+    background-color: var(--color2);
+    color: var(--color3);
+    margin: 0.5em;
+    padding:0.5em;
+}
+
+.galery2{
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+    grid-template-rows: repeat(200px);
+    justify-content:center;
+    grid-gap: 1px;
+    
+}
+
+.contact img{
+    width: 3em;
+    padding-right:0.7em;
+    
+}
+
+.galery2 img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/*                                        CELULAR                       */
+@media  screen and (max-width: 850px)  {
+    /* MENU   */
+    header{
+        grid-template-columns:2fr 1fr;
+    }
+    ul{
+      right:0;
+      transition: all 0.3s;
+      position:absolute;
+      flex-direction: column;
+      top: calc(var(--row) + var(--border) );
+      background-color: var(--color2);
+      width: 45%;
+      height: calc(100vh - var(--row) + var(--border) );
+      justify-content: flex-start;
+      padding: 0.9em; 
+      box-shadow: -5px 0px 8px rgb(22, 19, 19);
+      
+    }
+    
+    .icon-menu{
+        color: var(--color3);
+        margin-right:0.2 ;
+        display: flex;
+        justify-content: flex-end;
+    
+    }
+    .check{
+        display: block;
+    }
+
+    .open{
+       right :-100%;
+    }
+
+    .logo{
+        width: 40px;
+        height: 40px;
+    }
+    /* VARIABLES  */
+    :root{
+        --columns:2;
+    }
+    /*                               FUENTES                 */
+    .title, .sentence p, .textBaner h2 , h6{
+        font-size: 1.2rem;
+    }
+
+    .textBaner h1{
+    font-size: 1.5rem;
+    }
+    
+    .itemNosotros h5 , a p,span{
+        font-size: 0.8rem;
+        padding: 0.4em;
+    }
+
+    .itemNosotros h5 {
+        font-size: 1.2rem;
+    }
+
+    .itemNosotros p,li{
+        font-size: 0.7em;
+        margin: 1em;
+    }
+
+    .copyr{
+        font-size: 0.4em;
+    }
+
+    .contact img{
+        width: 2em;
+        padding-right:0.5em;
+    }
+    
+    form , .contact{
+        margin: 0.4em;
+    }
+
+    .itemContact  a{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction:column;
+        padding: 0.1em;
+        margin: 0.1em;
+    }
+    
+    .containerContact  {
+        grid-template-columns:1fr ;
+        grid-template-rows: repeat(1fr);
+    }
+    /*                 INICIO        */
+    .imgBaner{
+        background-image: url(../img/b.jpg) ;
+    
+    }
+
+}
+
+    /* .openMain{
+        transform: translateX(-45%);
+    } */
+    
+    /* flex:auto ocupan la misma cantidad de espacio todos los elementos  */
